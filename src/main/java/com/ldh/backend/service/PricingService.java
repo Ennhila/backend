@@ -23,6 +23,7 @@ import com.ldh.backend.repository.ZonePrefixRepository;
 import com.ldh.backend.web.dto.PublicDeliveryTypeResponse;
 import com.ldh.backend.web.dto.PricingQuoteRequest;
 import com.ldh.backend.web.dto.PricingQuoteResponse;
+// (zones → matrix → weight → delivery type)	
 
 @Service
 public class PricingService {
@@ -39,7 +40,7 @@ public class PricingService {
 		this.matrixRepository = matrixRepository;
 		this.modifierRepository = modifierRepository;
 	}
-
+	
 	@Transactional(readOnly = true)
 	public List<PublicDeliveryTypeResponse> listActiveDeliveryTypes() {
 		return modifierRepository.findAllByActiveIsTrueOrderByCodeAsc().stream()

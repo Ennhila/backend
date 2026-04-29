@@ -1,5 +1,5 @@
 package com.ldh.backend.config;
-
+// CORS (localhost + opción env), cadena filtros JWT, roles por path | Seguridad centralizada | Un solo lugar para políticas
 import java.util.List;
 
 import org.springframework.context.annotation.Bean;
